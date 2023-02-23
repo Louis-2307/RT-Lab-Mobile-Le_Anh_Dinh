@@ -19,26 +19,11 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzW-nJ-nUT">
                                 <rect key="frame" x="0.0" y="45" width="393" height="44"/>
                                 <items>
-                                    <navigationItem title="XML List" id="d6w-bY-Ssr">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="SCS-M1-7KM">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="GMv-Xa-xMK">
-                                                <rect key="frame" x="290" y="5" width="87" height="34.333333333333336"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Import"/>
-                                                <connections>
-                                                    <segue destination="L95-jv-bTn" kind="presentation" identifier="goToNextPage" id="Xjj-d0-ksv"/>
-                                                </connections>
-                                            </button>
-                                            <connections>
-                                                <action selector="ImportButton:" destination="BYZ-38-t0r" id="G2h-96-DiS"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="XML List" id="d6w-bY-Ssr"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ckf-UC-CLV">
-                                <rect key="frame" x="0.0" y="89" width="393" height="729"/>
+                                <rect key="frame" x="0.0" y="89" width="393" height="585"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="toDoCell" id="5kk-x5-QAk">
@@ -51,22 +36,36 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVu-So-buz">
+                                <rect key="frame" x="159" y="706" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Import"/>
+                                <connections>
+                                    <action selector="ImportButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9uh-Hh-wzY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hzW-nJ-nUT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="45" id="0hh-HG-xTQ"/>
-                            <constraint firstItem="ckf-UC-CLV" firstAttribute="top" secondItem="hzW-nJ-nUT" secondAttribute="bottom" id="DYd-yj-b78"/>
-                            <constraint firstItem="ckf-UC-CLV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Jfy-Uf-O5c"/>
                             <constraint firstItem="hzW-nJ-nUT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MAi-SB-FnL"/>
-                            <constraint firstItem="ckf-UC-CLV" firstAttribute="top" secondItem="hzW-nJ-nUT" secondAttribute="bottom" id="Ojp-gp-nTH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vVu-So-buz" secondAttribute="bottom" constant="28" id="NUR-Go-bFT"/>
+                            <constraint firstItem="vVu-So-buz" firstAttribute="top" secondItem="ckf-UC-CLV" secondAttribute="bottom" constant="32" id="PYy-Oo-lUp"/>
+                            <constraint firstItem="ckf-UC-CLV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-95" id="SgU-XM-lNM"/>
+                            <constraint firstItem="ckf-UC-CLV" firstAttribute="top" secondItem="hzW-nJ-nUT" secondAttribute="bottom" id="ZPP-ye-gnF"/>
+                            <constraint firstItem="vVu-So-buz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="159" id="cCk-Oy-dOO"/>
                             <constraint firstItem="hzW-nJ-nUT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fIp-GW-Ujq"/>
-                            <constraint firstItem="ckf-UC-CLV" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="rM1-ge-oJ7"/>
-                            <constraint firstItem="ckf-UC-CLV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ucF-c6-YfS"/>
+                            <constraint firstItem="ckf-UC-CLV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hE8-oi-5Rw"/>
+                            <constraint firstItem="ckf-UC-CLV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oKg-OX-nGZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vVu-So-buz" secondAttribute="trailing" constant="159" id="tsx-pW-wNK"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ckf-UC-CLV" id="9QW-Qy-7ND"/>
+                        <segue destination="L95-jv-bTn" kind="presentation" identifier="goToNextPage" id="5jZ-kb-07Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
