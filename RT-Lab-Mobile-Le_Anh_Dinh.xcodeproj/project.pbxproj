@@ -13,6 +13,16 @@
 		3B0FA59129A7B71C001D61BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA58F29A7B71C001D61BB /* Main.storyboard */; };
 		3B0FA59329A7B71E001D61BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA59229A7B71E001D61BB /* Assets.xcassets */; };
 		3B0FA59629A7B71E001D61BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA59429A7B71E001D61BB /* LaunchScreen.storyboard */; };
+		3B0FA5A729A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-38-52-181.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA59E29A7B9EE001D61BB /* All_in_One_GEN007_2015-07-06_12-38-52-181.xml */; };
+		3B0FA5A829A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-40-01-991.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA59F29A7B9EE001D61BB /* All_in_One_GEN007_2015-07-06_12-40-01-991.xml */; };
+		3B0FA5A929A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_13-31-03-714.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA5A029A7B9EE001D61BB /* All_in_One_GEN007_2015-07-06_13-31-03-714.xml */; };
+		3B0FA5AA29A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-39-25-661.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA5A129A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-39-25-661.xml */; };
+		3B0FA5AB29A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-41-09-481.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA5A229A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-41-09-481.xml */; };
+		3B0FA5AC29A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_11-31-03-714.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA5A329A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_11-31-03-714.xml */; };
+		3B0FA5AD29A7B9EF001D61BB /* MNG_DAILY_PLANNING_G3_2019-09-11_08-28-52-141.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA5A429A7B9EF001D61BB /* MNG_DAILY_PLANNING_G3_2019-09-11_08-28-52-141.xml */; };
+		3B0FA5AE29A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-41-09-471.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA5A529A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-41-09-471.xml */; };
+		3B0FA5AF29A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_11-31-03-74.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B0FA5A629A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_11-31-03-74.xml */; };
+		3B0FA5B229A7C2B4001D61BB /* SecondPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0FA5B129A7C2B4001D61BB /* SecondPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,16 @@
 		3B0FA59229A7B71E001D61BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B0FA59529A7B71E001D61BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B0FA59729A7B71E001D61BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B0FA59E29A7B9EE001D61BB /* All_in_One_GEN007_2015-07-06_12-38-52-181.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "All_in_One_GEN007_2015-07-06_12-38-52-181.xml"; sourceTree = "<group>"; };
+		3B0FA59F29A7B9EE001D61BB /* All_in_One_GEN007_2015-07-06_12-40-01-991.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "All_in_One_GEN007_2015-07-06_12-40-01-991.xml"; sourceTree = "<group>"; };
+		3B0FA5A029A7B9EE001D61BB /* All_in_One_GEN007_2015-07-06_13-31-03-714.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "All_in_One_GEN007_2015-07-06_13-31-03-714.xml"; sourceTree = "<group>"; };
+		3B0FA5A129A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-39-25-661.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "All_in_One_GEN007_2015-07-06_12-39-25-661.xml"; sourceTree = "<group>"; };
+		3B0FA5A229A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-41-09-481.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "All_in_One_GEN007_2015-07-06_12-41-09-481.xml"; sourceTree = "<group>"; };
+		3B0FA5A329A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_11-31-03-714.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "All_in_One_GEN007_2015-07-06_11-31-03-714.xml"; sourceTree = "<group>"; };
+		3B0FA5A429A7B9EF001D61BB /* MNG_DAILY_PLANNING_G3_2019-09-11_08-28-52-141.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "MNG_DAILY_PLANNING_G3_2019-09-11_08-28-52-141.xml"; sourceTree = "<group>"; };
+		3B0FA5A529A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-41-09-471.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "All_in_One_GEN007_2015-07-06_12-41-09-471.xml"; sourceTree = "<group>"; };
+		3B0FA5A629A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_11-31-03-74.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "All_in_One_GEN007_2015-07-06_11-31-03-74.xml"; sourceTree = "<group>"; };
+		3B0FA5B129A7C2B4001D61BB /* SecondPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,41 @@
 		3B0FA58829A7B71C001D61BB /* RT-Lab-Mobile-Le_Anh_Dinh */ = {
 			isa = PBXGroup;
 			children = (
+				3B0FA5B029A7BA1C001D61BB /* Official-Data */,
+				3B0FA59D29A7B9D2001D61BB /* Data */,
 				3B0FA58929A7B71C001D61BB /* AppDelegate.swift */,
 				3B0FA58B29A7B71C001D61BB /* SceneDelegate.swift */,
 				3B0FA58D29A7B71C001D61BB /* ViewController.swift */,
+				3B0FA5B129A7C2B4001D61BB /* SecondPage.swift */,
 				3B0FA58F29A7B71C001D61BB /* Main.storyboard */,
 				3B0FA59229A7B71E001D61BB /* Assets.xcassets */,
 				3B0FA59429A7B71E001D61BB /* LaunchScreen.storyboard */,
 				3B0FA59729A7B71E001D61BB /* Info.plist */,
 			);
 			path = "RT-Lab-Mobile-Le_Anh_Dinh";
+			sourceTree = "<group>";
+		};
+		3B0FA59D29A7B9D2001D61BB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B0FA5A629A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_11-31-03-74.xml */,
+				3B0FA5A329A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_11-31-03-714.xml */,
+				3B0FA59E29A7B9EE001D61BB /* All_in_One_GEN007_2015-07-06_12-38-52-181.xml */,
+				3B0FA5A129A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-39-25-661.xml */,
+				3B0FA59F29A7B9EE001D61BB /* All_in_One_GEN007_2015-07-06_12-40-01-991.xml */,
+				3B0FA5A529A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-41-09-471.xml */,
+				3B0FA5A229A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-41-09-481.xml */,
+				3B0FA5A029A7B9EE001D61BB /* All_in_One_GEN007_2015-07-06_13-31-03-714.xml */,
+				3B0FA5A429A7B9EF001D61BB /* MNG_DAILY_PLANNING_G3_2019-09-11_08-28-52-141.xml */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3B0FA5B029A7BA1C001D61BB /* Official-Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Official-Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +173,16 @@
 			files = (
 				3B0FA59629A7B71E001D61BB /* LaunchScreen.storyboard in Resources */,
 				3B0FA59329A7B71E001D61BB /* Assets.xcassets in Resources */,
+				3B0FA5AD29A7B9EF001D61BB /* MNG_DAILY_PLANNING_G3_2019-09-11_08-28-52-141.xml in Resources */,
+				3B0FA5AA29A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-39-25-661.xml in Resources */,
 				3B0FA59129A7B71C001D61BB /* Main.storyboard in Resources */,
+				3B0FA5AE29A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-41-09-471.xml in Resources */,
+				3B0FA5A929A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_13-31-03-714.xml in Resources */,
+				3B0FA5AF29A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_11-31-03-74.xml in Resources */,
+				3B0FA5AC29A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_11-31-03-714.xml in Resources */,
+				3B0FA5A729A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-38-52-181.xml in Resources */,
+				3B0FA5AB29A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-41-09-481.xml in Resources */,
+				3B0FA5A829A7B9EF001D61BB /* All_in_One_GEN007_2015-07-06_12-40-01-991.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0FA5B229A7C2B4001D61BB /* SecondPage.swift in Sources */,
 				3B0FA58E29A7B71C001D61BB /* ViewController.swift in Sources */,
 				3B0FA58A29A7B71C001D61BB /* AppDelegate.swift in Sources */,
 				3B0FA58C29A7B71C001D61BB /* SceneDelegate.swift in Sources */,
