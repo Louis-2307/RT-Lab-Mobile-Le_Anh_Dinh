@@ -7,16 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "EA1CF9A5-81A6-4F4B-BC25-53CD470D8F08"
-            shouldBeEnabled = "No"
+            uuid = "5F001CB4-4B39-40D2-A024-398854D61934"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "RT-Lab-Mobile-Le_Anh_Dinh/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "copyItem()"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "ImportButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "35383581-624A-41FD-B4C4-23DCA4649488"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RT-Lab-Mobile-Le_Anh_Dinh/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "ParseXML()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

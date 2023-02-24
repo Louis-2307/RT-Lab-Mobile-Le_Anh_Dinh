@@ -10,16 +10,22 @@ import Foundation
 import SQLite
 
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, ObservableObject {
 
     @IBOutlet weak var tableView: UITableView!
     
     private var items: [ItemToDo] = []
     private var selectFile: [FileName] = []
+    private var valueParse: [ValueParse] = []
+    
+    
+    let Path =  "/Users/anhdinhle/Development/Fanshawe_Development/RT-Lab-Mobile-Le_Anh_Dinh/RT-Lab-Mobile-Le_Anh_Dinh/Data"
+    let DesPath =  "/Users/anhdinhle/Development/Fanshawe_Development/RT-Lab-Mobile-Le_Anh_Dinh/RT-Lab-Mobile-Le_Anh_Dinh/Official-Data"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        connectDB()
+        createDB()
         loadDefaultItems()
         tableView.dataSource = self
         tableView.delegate = self
@@ -28,29 +34,27 @@ class ViewController: UIViewController {
 
     
     @IBAction func ImportButton(_ sender: Any) {
-      
         copyItem()
+        ParseXML()
+        WriteDB()
         self.performSegue(withIdentifier: "goToNextPage", sender: self)
     }
   
 
     
-    private func copyItem(){
+     func copyItem(){
         
         for file in selectFile{
             
-            let Path =  "/Users/anhdinhle/Development/Fanshawe_Development/RT-Lab-Mobile-Le_Anh_Dinh/RT-Lab-Mobile-Le_Anh_Dinh/Data"
             let SourcePath = "\(Path)/\(file.Name)"
-            
-            let Path2 =  "/Users/anhdinhle/Development/Fanshawe_Development/RT-Lab-Mobile-Le_Anh_Dinh/RT-Lab-Mobile-Le_Anh_Dinh/Official-data"
-            let DesPath2 = "\(Path2)/\(file.Name)"
+            let DesPath2 = "\(DesPath)/\(file.Name)"
             
 
             do {
-               if FileManager.default.fileExists(atPath: DesPath2) {
-                try FileManager.default.removeItem(atPath: DesPath2)
+               if FileManager.default.fileExists(atPath: "\(DesPath2)") {
+                try FileManager.default.removeItem(atPath: "\(DesPath2)")
                 }
-                try FileManager.default.copyItem(atPath: SourcePath, toPath: DesPath2)
+                try FileManager.default.copyItem(atPath: "\(SourcePath)", toPath: "\(DesPath2)")
                 
             }
             catch {
@@ -60,10 +64,10 @@ class ViewController: UIViewController {
     }
     
     
-    private func loadDefaultItems() {
-        let path = "/Users/anhdinhle/Development/Fanshawe_Development/RT-Lab-Mobile-Le_Anh_Dinh/RT-Lab-Mobile-Le_Anh_Dinh/Data"
+     func loadDefaultItems() {
+        
         do {
-            let itemsInDirectory = try FileManager.default.contentsOfDirectory(atPath: path)
+            let itemsInDirectory = try FileManager.default.contentsOfDirectory(atPath: "\(Path)")
 
             for file in itemsInDirectory {
                 items.append(ItemToDo(FileName: "\(file)"))
@@ -72,28 +76,79 @@ class ViewController: UIViewController {
              print("failed to read directory")
         }
     }
-    
-    
-    private func connectDB(){
+    private func createDB(){
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true ).first!
         do {
-            let db = try Connection("path/to/db.sqlite3")
+            
+            let db = try Connection("\(path)/db.sqlite7")
+            print(db)
             
             let xml = Table("XML")
-            let id = Expression<Int64>("Id")
-            let value = Expression<String?>("Value")
+            let ID = Expression<String?>("ID")
             let Path = Expression<String>("Path")
-            
-            try db.run(xml.create { t in
-                t.column(id, primaryKey: true)
-                t.column(value,unique: true)
-                t.column(Path)
-            })
+
+               try db.run(xml.create { t in
+                   t.column(ID,unique: true)
+                   t.column(Path)
+               })
         }
         catch
         {
             print(error)
         }
     }
+    
+    private func UpdateDB(uid: String, pathName: String){
+        
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true ).first!
+        do {
+            
+            let db = try Connection("\(path)/db.sqlite7")
+            print(db)
+            
+            let xml = Table("XML")
+            let ID = Expression<String?>("ID")
+            let Path = Expression<String>("Path")
+            let rowid = try db.run(xml.insert(ID <- "\(uid)", Path <- "\(pathName)"))
+            
+            let rowIterator = try db.prepareRowIterator(xml)
+            for user in try Array(rowIterator) {
+                print("id: \(user[ID]), email: \(user[Path])")
+            }
+        }
+        catch
+        {
+            print(error)
+        }
+    }
+    
+    private func WriteDB(){
+        
+        for item in valueParse {
+            UpdateDB(uid: item.Value, pathName: DesPath)
+        }
+    }
+    private func ParseXML(){
+        
+        for item in selectFile {
+            loadJson(filename: "\(item.Name)")
+        }
+    }
+
+    
+    func loadJson(filename fileName: String) {
+        if let url = Bundle.main.url(forResource: fileName, withExtension: nil,subdirectory: "Official-Data") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let jsonData: ValueStruct? = try decoder.decode(ValueStruct.self, from: data)
+                valueParse.append(ValueParse(Value: jsonData!.All_in_One_GEN007.meta.instanceID))
+            } catch {
+                print("error:\(error)")
+            }
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToNextPage"
@@ -142,7 +197,6 @@ extension ViewController: UITableViewDelegate {
 }
 
 
-
 struct ItemToDo {
     let FileName: String
 }
@@ -150,3 +204,19 @@ struct ItemToDo {
 struct FileName {
     let Name: String
 }
+
+struct ValueParse {
+    let Value : String
+}
+struct ValueStruct: Decodable {
+    let All_in_One_GEN007: Content
+}
+
+struct Content: Decodable {
+    let meta: SubContent
+}
+
+struct SubContent: Decodable{
+    let instanceID: String
+}
+

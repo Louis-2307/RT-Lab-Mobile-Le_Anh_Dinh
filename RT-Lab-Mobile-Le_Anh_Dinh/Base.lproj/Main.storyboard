@@ -79,14 +79,49 @@
                     <view key="view" contentMode="scaleToFill" id="Qs8-Li-nQg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iIC-ep-6ii">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="alm-y6-z2N"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uhr-un-egH">
+                                <rect key="frame" x="0.0" y="59" width="393" height="690"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="toDoCell" id="Qco-cJ-NSJ">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qco-cJ-NSJ" id="1Bx-UJ-vbg">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Uqx-96-BWT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uhr-un-egH" firstAttribute="trailing" secondItem="Uqx-96-BWT" secondAttribute="trailing" id="K5V-QN-v46"/>
+                            <constraint firstAttribute="trailing" secondItem="iIC-ep-6ii" secondAttribute="trailing" id="XiX-t2-O9E"/>
+                            <constraint firstItem="iIC-ep-6ii" firstAttribute="leading" secondItem="Qs8-Li-nQg" secondAttribute="leading" id="ao0-Zs-vn1"/>
+                            <constraint firstItem="uhr-un-egH" firstAttribute="leading" secondItem="Uqx-96-BWT" secondAttribute="leading" id="iB0-1i-XaY"/>
+                            <constraint firstItem="Uqx-96-BWT" firstAttribute="bottom" secondItem="uhr-un-egH" secondAttribute="bottom" constant="34" id="kt8-uz-Mom"/>
+                            <constraint firstItem="iIC-ep-6ii" firstAttribute="top" secondItem="Qs8-Li-nQg" secondAttribute="top" id="mGv-lv-dzJ"/>
+                            <constraint firstItem="uhr-un-egH" firstAttribute="top" secondItem="Uqx-96-BWT" secondAttribute="top" id="w7Q-4H-awk"/>
+                            <constraint firstItem="uhr-un-egH" firstAttribute="top" secondItem="iIC-ep-6ii" secondAttribute="bottom" constant="15" id="w9U-XP-9qO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XiS-eF-3HT"/>
+                    <connections>
+                        <outlet property="TableView" destination="uhr-un-egH" id="rUx-po-Kmn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xb2-HP-Eyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="904" y="-22"/>
+            <point key="canvasLocation" x="903.05343511450383" y="-22.535211267605636"/>
         </scene>
     </scenes>
     <resources>
